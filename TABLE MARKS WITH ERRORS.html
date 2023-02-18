@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .text1{
+                float: left;
+                vertical-align: middle;
+                text-align-last: left;
+                padding-inline: 56.235px;
+                background-color: blueviolet;
+                border-color: crimson ;
+                border-width: 0.1235in;
+                font-family: 'Times New Roman', Times, serif;
+                font-style: italic;
+                font-weight: bolder;
+                font-size: 14px ;
+                color:aquamarine;
+              
+            }
+            .text2{
+                float: right;
+                vertical-align: center;
+                text-align-last: right;
+                padding-inline: 56.235px;
+                background-color: blueviolet;
+                border-color: crimson ;
+                border-width: 0.1235in;
+                font-family: 'Times New Roman', Times, serif;
+                font-style: italic;
+                font-size: 14px ;
+                font-weight: bolder;
+                color:aquamarine;
+              
+            }
+            .error
+            {
+                vertical-align: middle;
+                text-align: center;
+                font-weight: bolder;
+                font-style: italic;
+                font-size: 14px;
+                color: rgb(200,200,15);
+
+            }
+            .number{
+                font-style: italic;
+                font-weight: bolder;
+                font-size: 14px;
+                font-family: 'Times New Roman', Times, serif;
+                color:blue;
+                background-color: plum;
+                text-align: center;
+            }
+            body{
+                background-color: rgb(175, 150, 200);
+                background-position: center;
+                background-size: 13.325in;
+                background-image: url(https://i.pinimg.com/originals/53/0b/9c/530b9cdf2606c123f84b31bb93b15444.jpg);
+            }
+            p{
+                font-style: italic;
+                font-weight: bolder;
+                font-family: 'Times New Roman', Times, serif;
+                text-align: center;
+                color:sandybrown;
+                font-size: 14px;
+
+            }
+            h1{
+                font-style: italic;
+                font-weight: bolder;
+                font-family: 'Times New Roman', Times, serif;
+                text-align: center;
+                color: crimson;
+                font-size: 18px;
+
+            }
+            h2{
+                font-style: italic;
+                font-weight: bolder;
+                font-family: 'Times New Roman', Times, serif;
+                text-align: center;
+                color:cyan;
+                font-size: 14px;
+
+            }
+            h3
+            {
+                float: inline-end;
+                font-style: italic;
+                font-weight: bolder;
+                font-family: 'Times New Roman', Times, serif;
+                color:sandybrown;
+                font-size: 14px;
+            }
+            h4
+            {
+                text-align: right;
+                font-style: italic;
+                font-weight: bolder;
+                font-family: 'Times New Roman', Times, serif;
+                color:sandybrown;
+                font-size: 14px;
+            }
+        
+            table, tr, th, td
+            {
+                border:2.35px solid green;
+                background-color: purple;
+                text-align:center;
+            }
+            
+           
+        </style>
+    </head>
+<body>
+    <div id="INPUT" class="div">
+    <h3><b><label for="fname">FIRST NAME</label>
+        <input type="text" id="fname" name="fname" class="text1"></b></h3>
+    <h4><b><label for="lname" class="h4">LAST NAME</label>
+        <input type="text" id="lname" name="lname" class="text2"></b></h4><br>
+    <h3><b><label for="mobile" class="h3">MOBILE NUMBER</label>
+        <input type="text" id="mobile" name="mobile" class="text1"></b></h3>
+    <h4><b><label for="dob" class="h4">DOB</label>
+        <input type="date" id="dob" name="dob" class="text2"></b></h4><br>
+    <h3><b><label for="reg" class="h3">REGISTRATION NUMBER</label>
+        <input type="text" id="reg" name="reg" class="text1"></b></h3>
+    <h4><b><label for="location" class="h4">LOCATION</label>
+        <input type="text" id="location" name="location" class="text2"></b></h4><br>
+
+<center><table>
+    <tr>
+        <th><p>SUBJECT</p></th>
+        <th><p>MARKS</p></th>
+    </tr>
+    <tr>
+        <td><p>TAMIL</p></td>
+        <td><p><input type="number" id="nmtamil" class="number" min="0" max="100"><span class="error" id="spnerrortamil"></span></p></td>
+    </tr>
+    <tr>    
+        <td><p>ENGLISH</p></td>
+        <td><p><input type="number" id="nmenglish" class="number" min="0" max="100"><span class="error" id="spnerrorenglish"></span></p></td>
+    </tr>
+    <tr>
+        <td><p>MATHS</p></td>
+        <td><p><input type="number" id="nmmaths" class="number" min="0" max="100"><span class="error" id="spnerrormaths"></span></p></td>
+    </tr>
+    <tr>
+        <td><p>SCIENCE</p></td>
+        <td><p><input type="number" id="nmscience" class="number" min="0" max="100"><span class="error" id="spnerrorscience"></span></p></td>
+    </tr>
+    <tr>
+        <td><p>SOCIAL SCIENCE</p></td>
+        <td><p><input type="number" id="nmsocial" class="number" min="0" max="100"><span class="error" id="spnerrorsocial"></span></p></td>
+    </tr>
+</table></center>
+<p><input type="button" onclick="result()" value="SUBMIT DETAILS!"></p>
+</div>
+
+<div id="OUTPUT" class="div" style="display: none;">
+    <p>YOUR PERSONAL DETAILS</p>
+    <h2><span id="DETAILS"></span></h2>
+    <h1><u><span id="GRADE" style="color: crimson;"></span></u></h1><br>
+    <center><table>
+    <tr>
+        <th><p>SUBJECT</p></th>
+        <th><p>MARKS</p></th>
+    </tr>
+    <tr>
+        <td><p>TAMIL</p></td>
+        <td><p><span id="spantamil"></span></p></td>
+    </tr>
+    <tr>    
+        <td><p>ENGLISH</p></td>
+        <td><p><span id="spanenglish"></span></span></p></td>
+    </tr>
+    <tr>
+        <td><p>MATHS</p></td>
+        <td><p><span id="spanmaths"></span></span></p></td>
+    </tr>
+    <tr>
+        <td><p>SCIENCE</p></td>
+        <td><p><span id="spanscience"></span></span></p></td>
+    </tr>
+    <tr>
+        <td><p>SOCIAL SCIENCE</p></td>
+        <td><p><span id="spansocial"></span></span></p></td>
+    </tr>
+    <tr>
+        <td><p>TOTAL</p></td>
+        <td><p><span id="spantotal"></span></span></p></td>
+    </tr>
+    <tr>
+        <td><p>PERCENTAGE</p></td>
+        <td><p><span id="spanpercentage"></span></span></p></td>
+    </tr>
+</table></center>
+
+<p><input type="button" onclick="comehome()" value="HOME!"></p>
+</div>
+<script>
+function result()
+{
+    var FIRSTNAME=document.getElementById("fname").value;
+    var LASTNAME=document.getElementById("lname").value;
+    var MOBILENUMBER=document.getElementById("mobile").value;
+    var DOB=document.getElementById("dob").value;
+    var REGISTRATIONNUMBER=document.getElementById("reg").value;
+    var LOCATION=document.getElementById("location").value;
+    var TAMIL=document.getElementById("nmtamil").value;
+    var ENGLISH=document.getElementById("nmenglish").value;
+    var MATHS=document.getElementById("nmmaths").value;
+    var SCIENCE=document.getElementById("nmscience").value;
+    var SOCIAL=document.getElementById("nmsocial").value;
+    var TOTAL= parseInt(TAMIL) + parseInt(ENGLISH) + parseInt(MATHS) + parseInt(SCIENCE) + parseInt(SOCIAL);
+    var PERCENTAGE= TOTAL / 5;
+    document.getElementById("spantamil").innerHTML=TAMIL;
+    document.getElementById("spanenglish").innerHTML=ENGLISH;
+    document.getElementById("spanmaths").innerHTML=MATHS;
+    document.getElementById("spanscience").innerHTML=SCIENCE;
+    document.getElementById("spansocial").innerHTML=SOCIAL;
+    document.getElementById("spantotal").innerHTML=TOTAL;
+    document.getElementById("spanpercentage").innerHTML=PERCENTAGE + "%";
+    document.getElementById("DETAILS").innerText= "NAME: " + FIRSTNAME + "   " + LASTNAME + '\n' + "MOBILE NUMBER: " + MOBILENUMBER + '\n' + "D.O.B:  " + DOB + '\n' + "REGISTRATION NUMBER:  " + REGISTRATIONNUMBER + '\n' + "LOCATION:  " + LOCATION;
+    
+if(TAMIL=="")
+{
+    document.getElementById("spnerrortamil").innerHTML="PLEASE ENTER TAMIL MARK";
+    document.getElementById("spnerrorenglish").innerHTML="";
+    document.getElementById("spnerrormaths").innerHTML="";
+    document.getElementById("spnerrorsocial").innerHTML="";
+    document.getElementById("spnerrorscience").innerHTML="";
+    return false;
+}
+if(parseInt(TAMIL)>100)
+{
+    document.getElementById("spnerrortamil").innerHTML="TAMIL MARK MUST BE LESS THAN 100";
+    document.getElementById("spnerrorenglish").innerHTML="";
+    document.getElementById("spnerrormaths").innerHTML="";
+    document.getElementById("spnerrorsocial").innerHTML="";
+    document.getElementById("spnerrorscience").innerHTML="";
+    return false;
+}
+if(ENGLISH=="")
+{
+    document.getElementById("spnerrorenglish").innerHTML="PLEASE ENTER ENGLISH MARK";
+    document.getElementById("spnerrortamil").innerHTML="";
+    document.getElementById("spnerrormaths").innerHTML="";
+    document.getElementById("spnerrorsocial").innerHTML="";
+    document.getElementById("spnerrorscience").innerHTML="";
+    return false;
+}
+if(parseInt(ENGLISH)>100)
+{
+    document.getElementById("spnerrorenglish").innerHTML="ENGLISH MARK MUST BE LESS THAN 100";
+    document.getElementById("spnerrortamil").innerHTML="";
+    document.getElementById("spnerrormaths").innerHTML="";
+    document.getElementById("spnerrorsocial").innerHTML="";
+    document.getElementById("spnerrorscience").innerHTML="";
+    return false;
+}
+if(MATHS=="")
+{
+    document.getElementById("spnerrormaths").innerHTML="PLEASE ENTER MATHS MARK";
+    document.getElementById("spnerrorenglish").innerHTML="";
+    document.getElementById("spnerrortamil").innerHTML="";
+    document.getElementById("spnerrorsocial").innerHTML="";
+    document.getElementById("spnerrorscience").innerHTML="";
+    return false;
+}
+if(parseInt(MATHS)>100)
+{
+    document.getElementById("spnerrormaths").innerHTML="MATHS MARK MUST BE LESS THAN 100";
+    document.getElementById("spnerrorenglish").innerHTML="";
+    document.getElementById("spnerrortamil").innerHTML="";
+    document.getElementById("spnerrorsocial").innerHTML="";
+    document.getElementById("spnerrorscience").innerHTML="";
+    return false;
+}
+if(SCIENCE=="")
+{
+    document.getElementById("spnerrorscience").innerHTML="PLEASE ENTER SCIENCE MARK";
+    document.getElementById("spnerrorenglish").innerHTML="";
+    document.getElementById("spnerrortamil").innerHTML="";
+    document.getElementById("spnerrormaths").innerHTML="";
+    document.getElementById("spnerrorsocial").innerHTML="";
+    return false;
+}
+if(parseInt(SCIENCE)>100)
+{
+    document.getElementById("spnerrorscience").innerHTML="SCIENCE MARK MUST BE LESS THAN 100";
+    document.getElementById("spnerrorenglish").innerHTML="";
+    document.getElementById("spnerrortamil").innerHTML="";
+    document.getElementById("spnerrormaths").innerHTML="";
+    document.getElementById("spnerrorsocial").innerHTML="";
+    return false;
+}
+if(SOCIAL=="")
+{
+    document.getElementById("spnerrorsocial").innerHTML="PLEASE ENTER SOCIAL MARK";
+    document.getElementById("spnerrorenglish").innerHTML="";
+    document.getElementById("spnerrortamil").innerHTML="";
+    document.getElementById("spnerrormaths").innerHTML="";
+    document.getElementById("spnerrorscience").innerHTML="";
+    return false;
+}
+if(parseInt(SOCIAL)>100)
+{
+    document.getElementById("spnerrorsocial").innerHTML="SOCIAL MARK MUST BE LESS THAN 100";
+    document.getElementById("spnerrorenglish").innerHTML="";
+    document.getElementById("spnerrortamil").innerHTML="";
+    document.getElementById("spnerrormaths").innerHTML="";
+    document.getElementById("spnerrorscience").innerHTML="";
+    return false;
+}
+if(PERCENTAGE>90 && PERCENTAGE<=100)
+{
+    document.getElementById("GRADE").innerText="YOUR GRADE IS A";
+}
+else if(PERCENTAGE>80 && PERCENTAGE<=90)
+{
+    document.getElementById("GRADE").innerText="YOUR GRADE IS B";
+}  
+else if(PERCENTAGE>70 && PERCENTAGE<=80)
+{
+    document.getElementById("GRADE").innerText="YOUR GRADE IS C";
+}  
+else if(PERCENTAGE>60 && PERCENTAGE<=70)
+{
+    document.getElementById("GRADE").innerText="YOUR GRADE IS D";
+}  
+else if(PERCENTAGE>50 && PERCENTAGE<=60)
+{
+    document.getElementById("GRADE").innerText="YOUR GRADE IS E";
+}  
+else
+{
+    document.getElementById("GRADE").innerText="YOU ARE FAIL";
+}
+    document.getElementById("OUTPUT").style.display="block";
+    document.getElementById("INPUT").style.display="none";
+}
+
+function comehome()
+{
+    document.getElementById("OUTPUT").style.display="none";
+    document.getElementById("INPUT").style.display="block";
+}
+</script>
+
+</body>
+</html>
